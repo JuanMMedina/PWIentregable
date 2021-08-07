@@ -1,0 +1,28 @@
+<div class="container-fluid" style="height: 100vh">
+    <a href="/admin/locales/create"  class="btn btn-info">Agregar Local</a>
+    <h2 style="color:white">Locales Activos</h2>
+    <table class="table" style="color:white">
+        <tr>
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Direccion</th>
+            <th>Localidad</th>
+            <th>Telefono</th>
+            <th>Email</th>
+            <th>-</th>
+            <th>-</th>
+        </tr>
+        {{#each locales}}
+        <tr>
+            <td>{{id}}</td>
+            <td>{{nombre}}</td>
+            <td>{{direccion}}</td>
+            <td>{{localidad}}</td>
+            <td>{{telefono}}</td>
+            <td>{{mail}}</td>
+            <td><a href="/admin/locales/update/{{id}}" class="btn btn-info">Editar</a></td>
+            <td><a href="/admin/locales/delete/{{id}}" class="btn btn-info">Eliminar</a></td>
+        </tr>
+        {{/each}}
+    </table>
+</div>

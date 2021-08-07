@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>{{title}}</title>
+
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/6d31d90b57.js" crossorigin="anonymous"></script>
+  <link type="text/css" rel="stylesheet" href="./stylesheets/styles.css">
+</head>
+
+<body class="bg-dark">
+
+  <div id="page-container">
+
+    <div id="content-wrap">
+
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/"><img src="./images/584298b4a6515b1e0ad75adb.png" alt="McDonals"
+              style="height: 50px;"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="/"><b>Home</b></a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  <b>Productos</b>
+                </a>
+                <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item texto" href="/productos">Mostrar todo</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item texto" href="/productos/Hamburguesas">Hamburguesas</a></li>
+                  <li><a class="dropdown-item texto" href="/productos/Pollo">Linea Pollo</a></li>
+                  <li><a class="dropdown-item texto" href="/productos/Ensaladas">Ensaladas</a></li>
+                  <li><a class="dropdown-item texto" href="/productos/Bebidas">Bebidas</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/locales"><b>Locales</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/nosotros"><b>Nosotros</b></a>
+              </li>
+            </ul>
+            <form class="d-flex" action="./productos" method="post">
+              <input class="form-control me-2" type="search" name="aBuscar" placeholder="Triple Mac...">
+              <button class="btn btn-success me-2 fw-bold" type="submit">Buscar</button>
+            </form>
+            <div class="text-end">
+              <a href="/login"><button type="button" class="btn btn-warning fw-bold">Iniciar Sesion</button></a>
+              <a href="/registro"><button type="button" class="btn btn-danger me-2 fw-bold">Registrarse</button></a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="b-example-divider"></div>
+
+
+      {{{body}}}
+
+    </div>
+
+    <div class="b-example-divider"></div>
+
+
+    <footer class="text py-3 bg-warning">
+      <div class="container">
+        <p class="float-end mb-1">
+          <a href="#"><i class="fas fa-arrow-alt-circle-up fa-3x"></i></a>
+        </p>
+        <p class="mb-1"><a href="https://www.facebook.com/McDonaldsSpain/?brand_redir=79667539019"><i
+              class="fab fa-facebook fa-2x"></i></a> <a href="https://www.instagram.com/mcdonalds_ar/"><i
+              class="fab fa-instagram fa-2x"></i></a> <a href="https://twitter.com/mcdonalds_ar"><i
+              class="fab fa-twitter fa-2x"></i></a> <a href="https://www.youtube.com/user/McDonaldsSur"><i
+              class="fab fa-youtube fa-2x"></i></a> - © McDonald's 2021</p>
+        <p class="mb-0"><a href="https://www.buenosaires.gob.ar/defensaconsumidor">Defensa del Consumidor</a>.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

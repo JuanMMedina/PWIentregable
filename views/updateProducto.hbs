@@ -1,0 +1,67 @@
+<div class="container-fluid bg-dark m-0" style="height: 100vh">
+    <div class="row justify-content-center">
+        <div class="col-7 text-light">
+            <form action="/admin/productos/update/{{producto.id}}" method="post">
+                <div class="form group">
+                    <label for="imagen">Modificar Imagen<span class="text-danger">*</span></label>
+                    <input type="file" class="form-control" name="imagen" id="imagen">
+                </div>
+                <div class="form group">
+                    <label for="nombre">Nombre del producto<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" name="nombre" id="nombre" value="{{producto.nombre}}">
+                </div>
+                <div class="form group">
+                    <label for="descripcion">Descripcion del producto<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" name="descripcion" id="descripcion"
+                        value="{{producto.descripcion}}">
+                </div>
+                <div class="form group">
+                    <label for="calorias_kcal">Calorias<span class="text-danger">*</span></label>
+                    <input type="number" class="form-control" name="calorias_kcal" id="calorias_kcal"
+                        value="{{producto.calorias_kcal}}">
+                </div>
+                <div class="form group">
+                    <label for="grasa_total_g">Grasas totales<span class="text-danger">*</span></label>
+                    <input type="number" class="form-control" name="grasa_total_g" id="grasa_total_g"
+                        value="{{producto.grasa_total_g}}">
+                </div>
+                <div class="form group">
+                    <label for="carbo_total_g">Carbohidratos<span class="text-danger">*</span></label>
+                    <input type="number" class="form-control" name="carbo_total_g" id="carbo_total_g"
+                        value="{{producto.carbo_total_g}}">
+                </div>
+                <div class="form group">
+                    <label for="proteinas_g">Proteinas<span class="text-danger">*</span></label>
+                    <input type="number" class="form-control" name="proteinas_g" id="proteinas_g"
+                        value="{{producto.proteinas_g}}">
+                </div>
+                <div class="form group">
+                    <label for="peso_aprox_g">Peso<span class="text-danger">*</span></label>
+                    <input type="number" class="form-control" name="peso_aprox_g" id="peso_aprox_g"
+                        value="{{producto.peso_aprox_g}}">
+                </div>
+                <div class="form group">
+                    <label for="sal_mg">Sal<span class="text-danger">*</span></label>
+                    <input type="number" class="form-control" name="sal_mg" id="sal_mg" value="{{producto.sal_mg}}">
+                </div>
+                <div class="form group">
+                    <label for="id_categoria">Seleccione la categoria<span class="text-danger">*</span></label>
+                    <select name="id_categoria" class="form-select">
+                        <option value="{{producto.id_categoria}}">{{producto.nombreCategoria}}</option>
+                        {{#each categorias}}
+                        <option value="{{id}}">{{nombre}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+                <div class="form group">
+                    <label for="precio">Precio<span class="text-danger">*</span></label>
+                    <input type="number" class="form-control" name="precio" id="precio" value="{{producto.precio}}">
+                </div>
+                <div class="form group">
+                    <button type="submit" class="btn btn-info mt-2">Agregar Producto</button>
+                </div>
+            </form>
+            <a href="/admin/productos" class="btn btn-info mt-2">Volver</a>
+        </div>
+    </div>
+</div>

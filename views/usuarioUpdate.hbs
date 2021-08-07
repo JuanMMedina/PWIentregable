@@ -1,0 +1,43 @@
+<div class="container-fluid bg-dark m-0" style="height: 100vh">
+    <div class="row justify-content-center">
+        <div class="col-7 text-light">
+            <form action="/admin/usuarios/update/{{usuario.id}}" method="post"
+                style="color:white">
+                <div class="form group">
+                    <label for="nombre">Nombre<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" name="nombre" id="nombre" value="{{usuario.nombre}}">
+                </div>
+                <div class="form group">
+                    <label for="apellido">Apellido<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" name="apellido" id="apellido" value="{{usuario.apellido}}">
+                </div>
+                <div class="form group">
+                    <label for="telefono">Telefono<span class="text-danger">*</span></label>
+                    <input type="number" class="form-control" name="telefono" id="telefono"
+                        value="{{usuario.telefono}}">
+                </div>
+                <div class="form group">
+                    <label for="mail">Email<span class="text-danger">*</span></label>
+                    <input type="email" class="form-control" name="mail" id="mail" value="{{usuario.mail}}">
+                </div>
+                <div class="form group">
+                    <label for="pass">Contraseña<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" name="pass" id="pass" placeholder="Ingrese nueva contraseña">
+                </div>
+                <div class="form group">
+                    <label for="validado">Validado(0-no, 1-si)<span class="text-danger">*</span></label>
+                    <input type="number" class="form-control" name="validado" id="validado"
+                        value="{{usuario.validado}}">
+                </div>
+                <div class="form group">
+                    <label for="admin">Admin(0-no, 1-si)<span class="text-danger">*</span></label>
+                    <input type="number" class="form-control" name="admin" id="number" value="{{usuario.admin}}">
+                </div>
+                <div class="form group">
+                    <button type="submit" class="btn btn-info mt-2">Modificar usuario</button>
+                </div>
+            </form>
+            <a href="/admin/usuarios" class="btn btn-info mt-2">Volver</a>
+        </div>
+    </div>
+</div>

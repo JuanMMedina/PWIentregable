@@ -1,0 +1,30 @@
+<div class="container-fluid loginBg bg-success">
+  <div class="container col-xl-10 col-xxl-8 px-4 py-5 text-secondary">
+    <div class="row align-items-center g-lg-5 py-5">
+      <div class="col-lg-7 text-center text-lg-start">
+        <h1 class="display-4 fw-bold lh-1 mb-3 text-warning">Bienvenido a McDonald's</h1>
+        <p class="col-lg-10 fs-4 text-warning">Inicia sesion para poder disfrutar de todos nuestros beneficios, enterarte de las
+          últimas novedades en nuestro menu y mucho más!</p>
+      </div>
+      <div class="col-md-10 mx-auto col-lg-5">
+        <form action="/login" method="post" class="p-4 p-md-5 border rounded-3 bg-warning">
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="mail" name="mail" placeholder="name@example.com">
+            <label for="mail">Email</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="pass" name="pass" placeholder="Contraseña">
+            <label for="pass">Contraseña</label>
+          </div>
+          <div class="checkbox mb-3">
+          </div>
+          <button class="w-100 btn btn-lg btn-success" type="submit">Iniciar Sesion</button>
+          <p class="mt-2">{{message}}</p>
+          <hr class="my-4">
+          <small class="text-muted">Si aún no estas registrado, hace click aqui.<a href="/registro"
+              style="text-decoration:none; color:red"> Registrarse <i class="fas fa-user-plus"></i></small></a>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<div class="container-fluid">
+
+    <div class="b-example-divider"></div>
+
+    <img class="bannerIndex" src="http://localhost:3000/images/header-home-v2--br.png" alt="">
+
+    <div class="b-example-divider"></div>
+
+    <div class="container-fluid">
+
+        <div class="card my-5" style="width: 100">
+            <div class="row g-0">
+                <div class="col-md-2">
+                    <img src="/images/vertical_banner.png" class="img-fluid rounded-start" alt="banner vertical McDonalds">
+                </div>
+                <div class="col-md-8">
+
+                    <div class="row">
+                        {{#each productos}}
+                        <div class="col mt-5 mx-2">
+                            <a href="/productos/single/{{id}}">
+                                <div class="card ratio ratio-1x1" style="width: 15rem;">
+                                    <img src="/images/{{uuid}}" class="card-img-top" alt="{{nombre}}">
+                                    <div class="card-body">
+                                        <p class="card-text fw-bold outline">{{nombre}}</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        {{/each}}
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="container" style="height: 100vh">
+
+    <div class="imagen d-flex justify-content-center">
+        <img src="http://localhost:3000/images/locales.jpg" alt="Locales">
+    </div>
+
+    <table class="table" style="color:white">
+        <tr>
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Direccion</th>
+            <th>Localidad</th>
+            <th>Telefono</th>
+            <th>Email</th>
+        </tr>
+        {{#each locales}}
+        <tr>
+            <td>{{id}}</td>
+            <td>{{nombre}}</td>
+            <td>{{direccion}}</td>
+            <td>{{localidad}}</td>
+            <td>{{telefono}}</td>
+            <td>{{mail}}</td>
+        </tr>
+        {{/each}}
+    </table>
+</div>

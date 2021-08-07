@@ -1,0 +1,34 @@
+<div class="container-fluid" style="height: 100vh">
+    <a href="/admin/usuarios/create" class="btn btn-info">Agregar Usuario</a>
+    <h2 style="color:white">Usuarios Activos</h2>
+    <table class="table" style="color:white">
+        <tr>
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Telefono</th>
+            <th>Email</th>
+            <th>Contraseña</th>
+            <th>Direccion</th>
+            <th>Validado</th>
+            <th>Admin(0-NO; 1-SI)</th>
+            <th>-</th>
+            <th>-</th>
+        </tr>
+        {{#each usuarios}}
+        <tr>
+            <td>{{id}}</td>
+            <td>{{nombre}}</td>
+            <td>{{apellido}}</td>
+            <td>{{telefono}}</td>
+            <td>{{mail}}</td>
+            <td>***************</td>
+            <td>{{direccion}}</td>
+            <td>{{validado}}</td>
+            <td>{{admin}}</td>
+            <td><a href="/admin/usuarios/update/{{id}}" class="btn btn-info">Editar</a></td>
+            <td><a href="/admin/usuarios/delete/{{id}}" class="btn btn-info">Eliminar</a></td>
+        </tr>
+        {{/each}}
+    </table>
+</div>

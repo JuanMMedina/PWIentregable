@@ -1,0 +1,63 @@
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-8">
+            <img src="http://localhost:3000/images/burger.png" class="bannerAdmin" alt="menu mac donalds">
+        </div>
+        <div class="col-4 p-y-2">
+            <div class="card bg-warning">
+                <article class="card-body mx-auto" style="max-width: 400px;">
+                    <h4 class="card-title mt-2 text-center">Crear cuenta</h4>
+                    <p class="text-center">*Para iniciar sesion se le solicitara el Email y contraseña.</p>
+                    <p class="text-center">{{message}}</p>
+                    <form action="/registro" method="post">
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                            </div>
+                            <input name="nombre" id="nombre" class="form-control" placeholder="Nombre" type="text">
+                        </div>
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                            </div>
+                            <input name="apellido" id="apellido" class="form-control" placeholder="Apellido"
+                                type="text">
+                        </div>
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"> <i class="fas fa-at"></i> </span>
+                            </div>
+                            <input name="mail" id="mail" class="form-control" placeholder="Direccion de email"
+                                type="email">
+                        </div>
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+                            </div>
+                            <input name="telefono" id="telefono" class="form-control" placeholder="Numero de telefono"
+                                type="number">
+                        </div>
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"> <i class="fa fa-building"></i> </span>
+                            </div>
+                            <input name="direccion" id="direccion" class="form-control" placeholder="Direccion"
+                                type="text">
+                        </div>
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                            </div>
+                            <input name="pass" id="pass" class="form-control" placeholder="Create password"
+                                type="password">
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-danger"> Crear cuenta </button>
+                        </div>
+                        <p class="text-center">Ya estas registrado? <a href="/login">Inicia sesion</a></p>
+                    </form>
+                </article>
+            </div>
+        </div>
+    </div>
+</div>

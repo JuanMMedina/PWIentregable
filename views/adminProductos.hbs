@@ -1,0 +1,41 @@
+<div class="container-fluid" style="height: 100vh">
+    <a href="/admin/productos/create" class="btn btn-info">Agregar Producto</a>
+    <table class="table" style="color:white">
+        <tr>
+            <th>#</th>
+            <th>Imagen</th>
+            <th>Nombre</th>
+            <th>Descripcion</th>
+            <th>Precio</th>
+            <th>Calorias(Kcal)</th>
+            <th>Grasas Total(gr)</th>
+            <th>Carbohidratos Total(gr)</th>
+            <th>Proteinas(gr)</th>
+            <th>Peso Aprox.(gr)</th>
+            <th>Sal(mg)</th>
+            <th>Categoria</th>
+            <th>Precio</th>
+            <th>-</th>
+            <th>-</th>
+        </tr>
+        {{#each productos}}
+        <tr>
+            <td>{{id}}</td>
+            <td><img src="/images/{{uuid}}" alt="no hay imagen" height="75"></td>
+            <td>{{nombre}}</td>
+            <td>{{descripcion}}</td>
+            <td>{{precio}}</td>
+            <td>{{calorias_kcal}}</td>
+            <td>{{grasa_total_g}}</td>
+            <td>{{carbo_total_g}}</td>
+            <td>{{proteinas_g}}</td>
+            <td>{{peso_aprox_g}}</td>
+            <td>{{sal_mg}}</td>
+            <td>{{nombreCategoria}}</td>
+            <td>{{precio}}</td>
+            <td><a href="/admin/productos/update/{{id}}" class="btn btn-info">Editar</a></td>
+            <td><a href="/admin/productos/delete/{{id}}" class="btn btn-info">Eliminar</a></td>
+        </tr>
+        {{/each}}
+    </table>
+</div>

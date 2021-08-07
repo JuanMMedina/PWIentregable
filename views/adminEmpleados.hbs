@@ -1,0 +1,30 @@
+<div class="container-fluid" style="height: 100vh">
+    <a href="/admin/empleados/create"  class="btn btn-info">Agregar Empleado</a>
+    <h2 style="color:white">Empleados Activos</h2>
+    <table class="table" style="color:white">
+        <tr>
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Telefono</th>
+            <th>Email</th>
+            <th>Direccion</th>
+            <th>Foto</th>
+            <th>-</th>
+            <th>-</th>
+        </tr>
+        {{#each empleados}}
+        <tr>
+            <td>{{id}}</td>
+            <td>{{nombre}}</td>
+            <td>{{apellido}}</td>
+            <td>{{telefono}}</td>
+            <td>{{mail}}</td>
+            <td>{{direccion}}</td>
+            <td><img src="/images/{{uuid}}" alt="no hay imagen" height="75"></td>
+            <td><a href="/admin/empleados/update/{{id}}" class="btn btn-info">Editar</a></td>
+            <td><a href="/admin/empleados/delete/{{id}}" class="btn btn-info">Eliminar</a></td>
+        </tr>
+        {{/each}}
+    </table>
+</div>

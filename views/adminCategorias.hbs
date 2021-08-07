@@ -1,0 +1,22 @@
+<div class="container-fluid" style="height: 100vh">
+    <a href="/admin/categorias/create" class="btn btn-info">Agregar Categoria</a>
+    <h2 style="color:white">Categorias</h2>
+    <table class="table" style="color:white">
+        <tr>
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Descripcion</th>
+            <th>-</th>
+            <th>-</th>
+        </tr>
+        {{#each categorias}}
+        <tr>
+            <td>{{id}}</td>
+            <td>{{nombre}}</td>
+            <td>{{descripcion}}</td>
+            <td><a href="/admin/categorias/update/{{id}}" class="btn btn-info">Editar</a></td>
+            <td><a href="/admin/categorias/delete/{{id}}" class="btn btn-info">Eliminar</a></td>
+        </tr>
+        {{/each}}
+    </table>
+</div>
